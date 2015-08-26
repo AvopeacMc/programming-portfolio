@@ -1,4 +1,4 @@
 # programming-portfolio
 High school programming class files
 
-hallo werld
+We wrote the hello, world program with python in terminal.

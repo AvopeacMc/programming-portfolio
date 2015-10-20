@@ -74,9 +74,41 @@ def main_arithmetic():
 	print "test pythagoras(3, 4): ", pythagoras(3, 4)
 	print "test pythagoras 2(35, 67): ", pythagoras(35, 67)
 	
+	
+def reverse(zack):
+	return not zack
+	
+def band(a, b):
+	if a==True and b==True: 
+		return True
+	else:
+		return False
+		
+def band2(a, b):
+	return a and b
+	
+def bor(a, b):
+	if a==True or b==True:
+		return True
+	else:
+	return False	
+	
+"""def bor(a, b):
+	return a or b"""
+	
+def main_boolean():
+	print "test reverse(True): ", reverse(True)
+	print "test reverse(False): ", reverse(False)
+	print "test band(True, True): ", band(True, True)
+	print "test band2(True, True): ", band2(True, True)
+	print "test bor(True, False): ", bor(True, False)
+	print "test bor(True, True): ", bor(True, True)
+	print "test bor(False, False): ", bor(False, False)
+	
 def main():
 	main_function()
 	main_arithmetic()
+	main_boolean()
 	
 main()
 

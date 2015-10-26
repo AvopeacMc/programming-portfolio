@@ -91,10 +91,16 @@ def bor(a, b):
 	if a==True or b==True:
 		return True
 	else:
-	return False	
+		return False
 	
 """def bor(a, b):
 	return a or b"""
+	
+def  xsame(b, g):
+	return b == g
+	
+def xor(b, g):
+	return b != g
 	
 def main_boolean():
 	print "test reverse(True): ", reverse(True)
@@ -104,11 +110,46 @@ def main_boolean():
 	print "test bor(True, False): ", bor(True, False)
 	print "test bor(True, True): ", bor(True, True)
 	print "test bor(False, False): ", bor(False, False)
+	print "test xsame(False, False): ", xsame(False, False)
+	print "test xsame(True, True): ", xsame(True, True)
+	print "test xsame(True, False): ", xsame(True, False)
 	
+	
+
+def positive(x):
+	if x > 0:
+		return True
+	else:
+		return False
+		
+def bigger(x, y):
+	if x > y:
+		return True
+	else:
+		return False
+		
+def no_diff(j, u):
+	if j == u:
+		return True 
+	else:
+		return False
+		
+		
+		
+def main_boolean_numbers():
+	print 'testing positive(29): ', positive(29)
+	print 'testing positive(-29): ', positive(-29)
+	print 'testing bigger(3, 2): ', bigger(3, 2)
+	print 'testing bigger(2, 3): ', bigger(2, 3)
+	print 'testing no_diff(2, 2): ', no_diff(2, 2)
+	print 'testing no_diff(2, 4): ', no_diff(2, 4)
+	
+			
 def main():
 	main_function()
 	main_arithmetic()
 	main_boolean()
+	main_boolean_numbers()
 	
 main()
 

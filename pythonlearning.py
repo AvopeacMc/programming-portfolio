@@ -140,7 +140,11 @@ def not_same(f, i):
 def less_than(r, p):
 	return r < p
 	
-		
+def at_least_13(x):
+	return x >= 13
+	
+def at_most_13(x):
+	return x <= 13		
 		
 		
 def main_boolean_numbers():
@@ -153,13 +157,57 @@ def main_boolean_numbers():
 	print 'testing not_same(2, 2): ', not_same(2, 2)
 	print 'testing not_same(2, 4): ', not_same(2, 4)
 	print 'testing less_than(2, 8): ', less_than(2, 8)
-	print 'testing less_than(8, 2)_: ', less_than(8, 2)
+	print 'testing less_than(8, 2): ', less_than(8, 2)
+	print 'testing at_least_13(40): ', at_least_13(40)
+	print 'testing at_least_13(13): ', at_least_13(13)
+	print 'testing at_least_13(3): ', at_least_13(3)
+	print 'testing at_most_13(40): ', at_most_13(40)
+	print 'testing at_most_13(13): ', at_most_13(13)
+	print 'testing at_most_13(3): ', at_most_13(3)
+			
+			
+def biggest(ab, yb):
+	if ab > yb:
+		return ab
+	else:
+		return yb
+		
+def smallest(ab, yb):
+	if ab < yb:
+		return ab
+	else:
+		return yb
+		
+def letter_grade(score):
+	if score >= 90:
+		return "A"
+	elif score >= 80:
+		return "B"
+	elif score >= 70:
+		return "C"
+	elif score >= 60:
+		return "D"
+	else:
+		return "F"		
+		
+def main_conditionals():
+	print 'testing biggest(500, 10): ', biggest(500, 10)
+	print 'testing biggest(500, 1000): ', biggest(500, 1000)
+	print 'testing smallest(500, 10): ', smallest(500, 10)
+	print 'testing smallest(500, 1000): ', smallest(500, 1000)
+	print 'testing letter_grade(90): ', letter_grade(90)
+	print 'testing letter_grade(80): ', letter_grade(80)
+	print 'testing letter_grade(70): ', letter_grade(70)
+	print 'testing letter_grade(60): ', letter_grade(60)
+	print 'testing letter_grade(55): ', letter_grade(55)
+			
 			
 def main():
 	main_function()
 	main_arithmetic()
 	main_boolean()
 	main_boolean_numbers()
+	main_conditionals()
 	
 main()
 

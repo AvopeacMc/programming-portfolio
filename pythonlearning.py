@@ -134,6 +134,13 @@ def no_diff(j, u):
 	else:
 		return False
 		
+def not_same(f, i):
+	return not f == i
+	
+def less_than(r, p):
+	return r < p
+	
+		
 		
 		
 def main_boolean_numbers():
@@ -143,7 +150,10 @@ def main_boolean_numbers():
 	print 'testing bigger(2, 3): ', bigger(2, 3)
 	print 'testing no_diff(2, 2): ', no_diff(2, 2)
 	print 'testing no_diff(2, 4): ', no_diff(2, 4)
-	
+	print 'testing not_same(2, 2): ', not_same(2, 2)
+	print 'testing not_same(2, 4): ', not_same(2, 4)
+	print 'testing less_than(2, 8): ', less_than(2, 8)
+	print 'testing less_than(8, 2)_: ', less_than(8, 2)
 			
 def main():
 	main_function()

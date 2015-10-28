@@ -196,6 +196,37 @@ def food_tax(sub, gro):
 	else:
 		return sub * .0725
 		
+def same(a, b, c):
+	return a == b == c
+	
+def big3(get_right, allu, jw):
+	if get_right >= allu and get_right >= jw:
+		return get_right
+	elif allu >= get_right and allu >= jw:
+		return allu
+	elif jw >= get_right and jw >= allu:
+		return jw
+	else:
+		return 
+		
+def small_sum(a, b, c):
+	if a < b and b < c:
+		return a + b
+	elif b < a and c < a:
+		return b + c
+	else:
+		return a + c
+		
+def meat_loaf(onions, ketchup, garlic):
+	if onions and garlic and not ketchup:
+		return True
+	elif onions and ketchup and not garlic:
+		return True
+	elif garlic and ketchup and not onions:
+		return True
+	else:
+		return False
+		
 def main_conditionals():
 	print 'testing biggest(500, 10): ', biggest(500, 10)
 	print 'testing biggest(500, 1000): ', biggest(500, 1000)
@@ -206,9 +237,22 @@ def main_conditionals():
 	print 'testing letter_grade(70): ', letter_grade(70)
 	print 'testing letter_grade(60): ', letter_grade(60)
 	print 'testing letter_grade(55): ', letter_grade(55)
-	print 'testing food_tax(12, True): ', food_tax(12, True)
-	print 'testing food_tax(5.95, False): ', food_tax(5.95, False)
-			
+	print 'testing food_tax(12.45, True): ', food_tax(12.45, True)
+	print 'testing food_tax(12.45, False): ', food_tax(12.45, False)
+	print 'testing same(7, 7, 7): ', same(7, 7, 7)
+	print 'testing same(7, 4, 5): ', same(7, 4, 5)
+	print 'testing big3(3, 2, 1): ', big3(3, 2, 1)
+	print 'testing big3(2, 3, 1): ', big3(2, 3, 1)
+	print 'testing big3(1, 2, 3): ', big3(1, 2, 3)	
+	print 'testing big3(3, 3, 1): ', big3(3, 3, 1)
+	print 'testing big3(1, 3, 3): ', big3(1, 3, 3)
+	print 'testing big3(3, 1, 3): ', big3(3, 1, 3)
+	print 'testing small_sum(1, 2, 3): ', small_sum(1, 2, 3)
+	print 'testing small_sum(3, 2, 1): ', small_sum(3, 2, 1)
+	print 'testing meat_loaf(True, True, False): ', meat_loaf(True, True, False)
+	print 'testign meat_loaf(true, False, False); ', meat_loaf(True, False, False)
+	print 'testing meat_loaf(True, True, True): ', meat_loaf(True, True, True)
+	
 			
 def main():
 	main_function()

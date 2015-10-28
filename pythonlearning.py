@@ -188,7 +188,13 @@ def letter_grade(score):
 	elif score >= 60:
 		return "D"
 	else:
-		return "F"		
+		return "F"
+		
+def food_tax(sub, gro):
+	if gro:
+		return sub * .03
+	else:
+		return sub * .0725
 		
 def main_conditionals():
 	print 'testing biggest(500, 10): ', biggest(500, 10)
@@ -200,6 +206,8 @@ def main_conditionals():
 	print 'testing letter_grade(70): ', letter_grade(70)
 	print 'testing letter_grade(60): ', letter_grade(60)
 	print 'testing letter_grade(55): ', letter_grade(55)
+	print 'testing food_tax(12, True): ', food_tax(12, True)
+	print 'testing food_tax(5.95, False): ', food_tax(5.95, False)
 			
 			
 def main():

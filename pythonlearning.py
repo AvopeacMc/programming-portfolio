@@ -227,6 +227,52 @@ def meat_loaf(onions, ketchup, garlic):
 	else:
 		return False
 		
+'''def big3reorder(a, b, c):
+	big = big3(a, b, c)
+	if a == big:
+		small = smallest(b, c)
+		if b == small:
+			middle = c
+		else:
+			middle = b
+	elif b == big:
+		small = smallest(a, c)
+		if a == small:
+			middle = c
+		else:
+			middle = a
+	elif c == big:
+		small = smallest(a, b)
+		if a == small:
+			middle = b
+		else:
+			middle = a
+	return big, middle, small
+	
+	
+def big3reorder(a, b, c):
+	x = [a, b, c]
+	x.sort()
+	x.reverse()
+	return x[0], [], []'''
+	
+def big3reorder(a, b, c):
+	if a == big3(a, b, c):
+		return a, biggest(b, c), smallest(b, c)
+	elif b == big3(a, b, c):
+		return b, biggest(a, c), smallest(a, c)
+	else:
+		return c, biggest(a, b), smallest(a, b)
+		
+def positive_multiple(w, h):
+	product = w * h
+	if not positive(product):
+		return product * -1
+	else:
+		return product
+	
+	
+					
 def main_conditionals():
 	print 'testing biggest(500, 10): ', biggest(500, 10)
 	print 'testing biggest(500, 1000): ', biggest(500, 1000)
@@ -252,7 +298,84 @@ def main_conditionals():
 	print 'testing meat_loaf(True, True, False): ', meat_loaf(True, True, False)
 	print 'testign meat_loaf(true, False, False); ', meat_loaf(True, False, False)
 	print 'testing meat_loaf(True, True, True): ', meat_loaf(True, True, True)
+	print "test big3reorder(5, 8, 2): ", big3reorder(5, 8, 2)
+	print 'testing positive_multiple(5, 7): ', positive_multiple(5, 7)
+	print 'testing positive_multiple(-5, -7): ', positive_multiple(-5, -7)
+	print 'testing positive_multiple(-5, 7): ', positive_multiple(-5, 7)
 	
+	
+def total(x):
+	t = 0
+	for num in range(x):
+		t += num
+	return t
+	
+def total_slice(a, b):
+	t = 0
+	for num in range(a, b):
+		t += num
+	return t
+	
+def total_slice2(a, b):
+	t = 0
+	for num in range(smallest(a, b), biggest(a, b)):
+		t += num
+	return t
+	
+def total_odds(a, b):
+	t = 0
+	for num in range(a, b):
+		if num % 2 == 1:
+			t += num
+	return t
+	
+def total_evens(a, b):
+	t = 0
+	for num in range(a, b):
+		if num % 2 == 0:
+			t += num
+	return t
+	
+def total_7s(a, b):
+	t = 0
+	for num in range(a, b):
+		if num % 7 == 0:
+			t += num
+	return t
+	
+def total_non7s(a, b):
+	t = 0
+	for num in range(a, b):
+		if num % 7 != 0:
+			t += num
+	return t
+	
+def squares(x):
+	ts = 0
+	for num in range(x):
+		ts += num**2
+	return ts
+
+	
+	
+def main_counted_loops():
+	print 'testing total(5): ', total(5)
+	print 'testing total(63): ', total(63)
+	print 'testing total_slice(3, 8): ', total_slice(3, 8)
+	print 'testing total_slice2(8, 3): ', total_slice2(8, 2)
+	print 'testing total_odds(2, 10): ', total_odds(2, 10)
+	print 'testing total_evens(2, 10): ', total_evens(2,10)
+	print 'testing total_7s(2, 30): ', total_7s(2, 30)
+	print 'testing total_non7s(2, 10): ', total_non7s(2, 10)
+	print 'testing squares(5): ', squares(5)
+	
+	
+def hello()
+	return hello
+	
+	
+def main_strings():
+
 			
 def main():
 	main_function()
@@ -260,6 +383,8 @@ def main():
 	main_boolean()
 	main_boolean_numbers()
 	main_conditionals()
+	main_counted_loops()
+	main_strings()
 	
 main()
 

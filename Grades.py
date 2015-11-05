@@ -15,6 +15,6 @@ while var == 1 :
 	elif score >= 83:
 		print 'B'
 	elif score >= 80:
-		print'B-'
+		print 'B-'
 	else:
 		print 'You Have Failed'

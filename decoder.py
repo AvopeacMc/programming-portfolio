@@ -6,6 +6,11 @@ def main():
 	print 'Your old message said: '
 	print old_message.read()
 	
+	try:
+		file = open(file_name, 'rw')
+	except:
+		print 'The file did not exist, I will create it for you.'
+	
 	message = raw_input("Enter your message: ")
 	plain_message = open(file_name, 'w')
  	plain_message.write(message)

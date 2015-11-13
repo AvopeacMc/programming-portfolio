@@ -370,11 +370,173 @@ def main_counted_loops():
 	print 'testing squares(5): ', squares(5)
 	
 	
-def hello()
-	return hello
+def hello():
+	return "hello"
+
+def nothing():
+	return ""
+	
+def second_letter(kek):
+	return kek[1]	
+	
+def one_letter(str, num):
+	return str[num]
+	
+def concatenate(silvester, tony):
+	return silvester + tony
+	
+def beauty(me):
+	return me + "beauty"
+	
+def slice_of_life(cold):
+	return cold[2:5]
+	
+def slice_of_heaven(str, num):
+	return str[num:num + 4]
+	
+def slice_of_perfection(str, x, y):
+	return str[x:x+y]
+	
+def length(str):
+	return len(str)
 	
 	
 def main_strings():
+	print 'testing hello(): ', hello()
+	print 'testing nothing(): ', nothing()
+	print 'testing second_letter(global): ', second_letter("global")
+	print 'testing one_letter(random, 4): ', one_letter("random", 4)
+	print 'testing concatenate(top, kek): ', concatenate('top', 'kek')
+	print 'testing beauty(false ): ', beauty('false ')
+	print 'testing slice_of_life("bread"); ', slice_of_life('bread')
+	print 'testing slice_of_heaven(whatareyoudoin, 5): ', slice_of_heaven('whatareyoudoin', 5)
+	print 'testing slice_of_perfection(nothingsperfect, 3, 10): ', slice_of_perfection('nothingsperfect', 3, 10)
+	print 'testing length("hello"): ', length('hello')
+	
+def short_list():
+	return [1, 2, 3]
+	
+def hollow():
+	return []
+
+def third_value(a):
+	return a[2]
+	
+def one_value(z, n):
+	return z[n]
+	
+def add_lists(b, s):
+	return b + s
+
+def pie(z):
+	#return z + [314]
+	z.append(314)
+	return z
+
+def grow_one(r, n):
+	r.append(n)
+	return r
+
+def sub_list(k):
+	return k[2: 6]
+	
+def sub_list2(hit, x):
+	return hit[x: x+3]
+	
+def sub_list3(hit, a, b):
+	return hit[a: a+b]
+
+def list_length(hit):
+	return len(hit)
+
+def main_lists():
+	print "testing short_list(): ", short_list()
+	print "testing hollow(): ", hollow()
+	a = [17, 38, 96, 79, 63, 74, 12, 24, 19, 6]
+	b = [5, 21, 78, 42, 63, 84]
+	c = ["Bob", "Kelton", "Bryan", "Troy", "Kaden", "Tetris" ]
+	print "test third_value(b): ", third_value(b)
+	print "test one_value(b, 5): ", one_value(b, 5)
+	print "test add_lists(a, b): ", add_lists(a, b)
+	print "test pie(a): ", pie(a)
+	print "test grow_one(b, 36): ", grow_one(b, 36)
+	print "test sub_list(a): ", sub_list(a)
+	print "testing sub_list2(c, 1): ", sub_list2(c, 1)
+	print "testing sub_list3(c, 3, 3): ", sub_list3(c, 3, 3)
+	print "testing list_length(c): ", list_length(c)
+	
+
+'''def list_total(numbers):#(a):
+	num = range(a)
+	b = sum(num)
+	return b
+	
+def list_total2(x):
+	num = range(x)
+	y = total(num)
+	return y
+	
+def lsit_total3(x):
+	
+def main_sequence_loop():
+	print 'testing list_total(10): ', list_total(10)
+	print 'testing list_total2(10): ', list_total(10)'''
+	
+def list_total(g):
+	total = 0
+	for number in g:
+		total += number
+	return total
+
+def list_total2(n):
+	total = 0
+	for number in n:
+		if number % 2 == 0:
+			total += number
+	return total
+
+def list_total3(nums):
+	total = 0
+	for num in range(1, len(nums), 2):
+		total += nums[num]
+	return total
+	
+def is_lowercase(letter):
+	alpha = 'abcdefghijklmnopqrstuvwxyz'
+	return letter in alpha
+	
+def string_lower_count(string):
+	#return len(filter(str.islower, string)) 
+	count = 0
+	for c in string:
+		if is_lowercase(c):
+			count += 1
+	return count
+	
+def string_digit_count(string):
+	return len(filter(str.isdigit, string))
+	
+def is_letter(char):
+	alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ'
+	return char in alpha
+	
+def string_word_count(words):
+	count = 0
+	for i in range(len(words)):
+		if words[i] == ' ' and is_letter(words[i+1]):
+			count += 1
+	return count 
+	
+def main_sequence_loops():
+	lucky = [3, 7, 9, 13, 12, 14, 44, 17, 21, 33, 32, 39, 42]
+	print "testing list_total(lucky): ", list_total(lucky)
+	print "testing list_total2(lucky): ", list_total2(lucky)
+	print "testing list_total3(lucky): ", list_total3(lucky)
+	print 'testing string_lower_count("HowMaNYlOwerCaSE"): ', string_lower_count("HowMaNYlOwerCaSE")
+	print 'testign string_digit_count("my iq is 180 yours is 2"): ', string_digit_count("my iq is 180 yours is 2")
+	print 'testing string_word_count("I am a Doctor of modern medicine"): ', string_word_count("I am a Doctor of modern medicine")
+	
+	
 
 			
 def main():
@@ -385,6 +547,9 @@ def main():
 	main_conditionals()
 	main_counted_loops()
 	main_strings()
+	main_lists()
+	main_sequence_loops()
+	
 	
 main()
 

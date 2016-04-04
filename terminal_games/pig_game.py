@@ -2,22 +2,70 @@
 import random
 import time
 
-def roll_die():
-	r = random.randrange(1, 7)
+def instructions():
+	print " Welcome to the game of Pig. To win, be the"
+	print "player with the most points at the end of the"
+	print "game. The game ends at the end of a round where"
+	print "at least one player has 100 or more points"
+	print
+	print " On each turn, you may roll the die as many times"
+	print "as you like to obtain more points. However, if"
+	print "you a 1, your turn is over, and you do not"
+	print "obtain any points that turn."
+	print
+
+
+
+def roll_die(sides):
+	r = random.randrange(1, sides+1)
 	return r
 	
-def take_turn():
-	turns = 0
+def take_turn(player):
+	point = 0
 	rolling = 1
-	raw_input("Press Enter to continue...")
-	
-	
-	
+	print " its your turn player ", player
+	raw_input( "press enter to begin")
+	while rolling==1:
+		time.sleep(1)
+		r = roll_die(6)
+		print 'You rolled a ', r 
+		if r == 1:
+			point = 0
+			rolling = 0
+		else:
+			point += r
+			print "you have " + str(point) + ' points.'
+			ans = raw_input('do you want to roll again? (0=No, 1=Yes): ')
+			if ans == '1':
+				rolling = 1
+			else:
+				rolling = 0
+	print "turn over."
+	return point
 
-	
+
 def main():
-	roll_die()
-	take_turn()
-	
-	
+	instructions()
+	p1 = 0
+	p2 = 0
+	while p1<100 and p2<100:
+		print " Player points are:" +str(p1)
+		print " Player points are:" +str(p2)
+		r = take_turn(1)
+		p1 += r
+		print "Player points are:" +str(p1)
+		print "Player points are:" +str(p2)
+		r = take_turn(2)
+		p2 += r
+		print " The game is over"
+		print " Player points are:" +str(p1)
+		print " Player points are:" +str(p2)
+	if p1>p2:
+		print " Player one is the winner"
+	elif p2>p1:
+		print "player two is the winner"
+	else:
+		print " Tie game"
+
+
 main()
